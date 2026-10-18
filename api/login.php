@@ -105,6 +105,33 @@ try {
         ]);
     }
 
+    // Create a login session after verifying the password.
+    ini_set('session.use_strict_mode', '1');
+
+    session_name('TLFSESSID');
+
+    session_set_cookie_params([
+        'lifetime' => 0,
+        'path' => '/',
+        'secure' => !empty($_SERVER['HTTPS'])
+            && $_SERVER['HTTPS'] !== 'off',
+        'httponly' => true,
+        'samesite' => 'Lax'
+    ]);
+
+    if (!session_start()) {
+        loginResponse(500, [
+            'success' => false,
+            'message' => 'Unable to start login session.'
+        ]);
+    }
+
+    // Prevent session fixation.
+    session_regenerate_id(true);
+
+    // Remember the authenticated user.
+    $_SESSION['user_id'] = (int) $user['user_id'];
+
     // Credentials are correct.
     loginResponse(200, [
         'success' => true,
