@@ -1,6 +1,4 @@
-
 <?php
-declare(strict_types=1);
 
 // Connect to the TLF Connect MySQL database.
 function getDbConnection(): PDO
