@@ -1,4 +1,3 @@
-
 <?php
 
 // Tell the client that this API returns JSON.
