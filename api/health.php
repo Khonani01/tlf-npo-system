@@ -1,7 +1,6 @@
 
 <?php
 
-
 // Tell the client that this API returns JSON.
 header('Content-Type: application/json; charset=utf-8');
 
