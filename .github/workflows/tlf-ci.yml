@@ -80,6 +80,7 @@ jobs:
           done
 
           php api/tests/smoke.php
+          php api/tests/functional.php
 
 
 
