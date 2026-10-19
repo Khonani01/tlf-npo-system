@@ -51,6 +51,14 @@ jobs:
         run: |
           find api -type f -name '*.php' -print0 |
           xargs -0 -r -n1 php -l
+          
+      - name: Import test database schema
+        env:
+          MYSQL_PWD: test_password
+        run: |
+          mysql --host=127.0.0.1 --port=3306 --user=tlf_test tlf_ci_test < api/tests/schema.sql
+          mysql --host=127.0.0.1 --port=3306 --user=tlf_test tlf_ci_test -e "SHOW TABLES;"
+
 
   android-build:
     name: Build Android APK
