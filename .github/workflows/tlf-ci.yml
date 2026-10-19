@@ -14,11 +14,29 @@ permissions:
   contents: read
 
 jobs:
+ 
   php-checks:
     name: Check PHP Code
     runs-on: ubuntu-latest
 
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: test_root_password
+          MYSQL_DATABASE: tlf_ci_test
+          MYSQL_USER: tlf_test
+          MYSQL_PASSWORD: test_password
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
