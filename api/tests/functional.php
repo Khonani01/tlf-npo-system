@@ -149,6 +149,35 @@ foreach ($tests as $test) {
     }
 }
 
+ // Verify that the registered user's password is hashed.
+try {
+    require_once dirname(__DIR__) . '/db.php';
+    $db = getDbConnection();
+
+    $stmt = $db->prepare(
+        'SELECT password_hash FROM `Users`
+         WHERE email = ? LIMIT 1'
+    );
+    $stmt->execute([$email]);
+
+    $storedHash = $stmt->fetchColumn();
+
+    if (
+        is_string($storedHash) &&
+        $storedHash !== $password &&
+        password_verify($password, $storedHash)
+    ) {
+        echo "PASS: Password stored securely\n";
+        $passed++;
+    } else {
+        echo "FAIL: Password storage verification\n";
+        $failed++;
+    }
+} catch (Throwable $e) {
+    echo "FAIL: Password storage verification\n";
+    $failed++;
+}
+
 echo "\nFunctional tests passed: $passed\n";
 echo "Functional tests failed: $failed\n";
 
