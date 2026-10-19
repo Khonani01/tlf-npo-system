@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>News & Events | Tshwane Leadership Foundation</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="nav-container">
+
+<img src="images/logo.jpeg" alt="Tshwane Leadership logo" class="logo"> 
+
+<nav class="navbar">
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="news.html">News & Events</a></li>
+<li><a href="reports.html">Reports</a></li>
+<li><a href="contact.html">Get Involved</a></li>
+<li><a href="login.html">Admin</a></li>
+
+</ul>
+
+</nav>
+<button class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+</div>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="news.html">News & Events</a>
+  <a href="reports.html">Reports</a>
+  <a href="contact.html">Get Involved</a>
+  <a href="volunteer.html">Volunteer</a>
+  <a href="donate.html">Donate</a>
+  <a href="login.html">Admin</a>
+</nav>
+</header>
+
+
+<section class="news-section">
+
+<h1 class="news-title">News & Events</h1>
+
+<div class="news-tabs">
+  <button class="tab-btn active" onclick="filterTab('news', this)">News</button>
+  <button class="tab-btn" onclick="filterTab('events', this)">Events</button>
+</div>
+
+<div class="news-container" id="news-tab">
+
+<div class="news-card" data-type="news">
+<img src="images/event1.jpeg" alt="Community Program">
+<h3>Youth Leadership Workshop</h3>
+<p class="news-date"><i class="fa-solid fa-calendar"></i> 15 March 2026</p>
+<p>
+The Tshwane Leadership Foundation hosted a youth leadership workshop
+focused on empowering young people with leadership and life skills.
+</p>
+<a href="#">Read More</a>
+</div>
+
+<div class="news-card" data-type="news">
+<img src="images/event2.jpeg" alt="Community Event">
+<h3>Community Development Program</h3>
+<p class="news-date"><i class="fa-solid fa-calendar"></i> 10 March 2026</p>
+<p>
+Volunteers and community members gathered to support local development
+projects aimed at improving livelihoods in Tshwane communities.
+</p>
+<a href="#">Read More</a>
+</div>
+
+<div class="news-card" data-type="news">
+<img src="images/event3.jpeg" alt="Education Program">
+<h3>Education Support Initiative</h3>
+<p class="news-date"><i class="fa-solid fa-calendar"></i> 5 March 2026</p>
+<p>
+The foundation continues to support learners through mentorship,
+educational programs, and access to learning resources.
+</p>
+<a href="#">Read More</a>
+</div>
+
+<div class="news-card" data-type="events">
+<img src="images/event1.jpeg" alt="Youth Summit">
+<div class="event-badge"><i class="fa-solid fa-calendar-days"></i> 12 April 2026</div>
+<h3>Youth Leadership Summit 2026</h3>
+<p class="news-date"><i class="fa-solid fa-clock"></i> 09:00 AM &nbsp; <i class="fa-solid fa-location-dot"></i> TLF Community Hall</p>
+<p>A full-day summit bringing together young leaders from across Tshwane for workshops and networking.</p>
+<a href="volunteer.html">Register</a>
+</div>
+
+<div class="news-card" data-type="events">
+<img src="images/event2.jpeg" alt="Clean-Up Drive">
+<div class="event-badge"><i class="fa-solid fa-calendar-days"></i> 25 April 2026</div>
+<h3>Community Clean-Up Drive</h3>
+<p class="news-date"><i class="fa-solid fa-clock"></i> 07:00 AM &nbsp; <i class="fa-solid fa-location-dot"></i> Marabastad Park</p>
+<p>Join 120+ volunteers to clean, paint and plant trees in local parks across Tshwane townships.</p>
+<a href="volunteer.html">Register</a>
+</div>
+
+<div class="news-card" data-type="events">
+<img src="images/event3.jpeg" alt="Mentorship Programme">
+<div class="event-badge"><i class="fa-solid fa-calendar-days"></i> 3 May 2026</div>
+<h3>Education Mentorship Programme</h3>
+<p class="news-date"><i class="fa-solid fa-clock"></i> 10:00 AM &nbsp; <i class="fa-solid fa-location-dot"></i> Soshanguve Centre</p>
+<p>An educational programme providing mentorship and resources to over 300 learners across Tshwane.</p>
+<a href="volunteer.html">Register</a>
+</div>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-column">
+
+<h3>Tshwane Leadership Foundation</h3>
+
+<p>
+Empowering communities through leadership development,
+education, and social impact initiatives across Tshwane.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="news.html">News & Events</a></li>
+<li><a href="reports.html">Reports</a></li>
+<li><a href="contact.html">Get Involved</a></li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Contact</h3>
+
+<p><i class="fa-solid fa-phone"></i> +27 12 345 6789</p>
+
+<p><i class="fa-solid fa-envelope"></i> info@tlfoundation.org</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Tshwane, South Africa</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Follow Us</h3>
+
+<div class="footer-social">
+
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+<a href="#"><i class="fa-brands fa-twitter"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Tshwane Leadership Foundation | Designed by 
+<span class="designer">Ofentse Nyiko Mashigoane</span>
+</p>
+
+</div>
+
+</footer>
+<script>
+  function toggleMenu() {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobile-nav').classList.toggle('open');
+  }
+  function filterTab(type, btn) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.news-card').forEach(card => {
+      card.style.display = (card.dataset.type === type) ? 'block' : 'none';
+    });
+  }
+  // Default: show news only
+  window.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.news-card').forEach(card => {
+      card.style.display = (card.dataset.type === 'news') ? 'block' : 'none';
+    });
+    // Support #events anchor
+    if (window.location.hash === '#events') {
+      document.querySelectorAll('.tab-btn')[1].click();
+    }
+  });
+</script>
+<script src="script.js"></script>
+</body>
+</html>

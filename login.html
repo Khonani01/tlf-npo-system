@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Login | Tshwane Leadership Foundation</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="nav-container">
+
+<img src="images/logo.jpeg" class="logo">
+
+<nav class="navbar">
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="news.html">News & Events</a></li>
+<li><a href="reports.html">Reports</a></li>
+<li><a href="contact.html">Get Involved</a></li>
+<li><a href="login.html">Admin</a></li>
+
+</ul>
+
+</nav>
+<button class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+</div>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="news.html">News & Events</a>
+  <a href="reports.html">Reports</a>
+  <a href="contact.html">Get Involved</a>
+  <a href="login.html">Admin</a>
+</nav>
+</header>
+
+
+<section class="admin-section">
+
+<h1>Administrator Login</h1>
+
+<form class="admin-form" method="post" action="process_login.php">
+
+<p id="login-error" style="display:none; color:#ff6b6b; margin-bottom:12px; text-align:center;"></p>
+
+<input type="email" name="email" placeholder="Admin email" required maxlength="100">
+
+<input type="password" name="password" placeholder="Password" required>
+
+<button type="submit">Login</button>
+
+</form>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-column">
+
+<h3>Tshwane Leadership Foundation</h3>
+
+<p>
+Empowering communities through leadership development,
+education, and social impact initiatives across Tshwane.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="news.html">News & Events</a></li>
+<li><a href="reports.html">Reports</a></li>
+<li><a href="contact.html">Get Involved</a></li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Contact</h3>
+
+<p><i class="fa-solid fa-phone"></i> +27 12 345 6789</p>
+
+<p><i class="fa-solid fa-envelope"></i> info@tlfoundation.org</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Tshwane, South Africa</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Follow Us</h3>
+
+<div class="footer-social">
+
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+<a href="#"><i class="fa-brands fa-twitter"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Tshwane Leadership Foundation | Designed by 
+<span class="designer">Ofentse Nyiko Mashigoane</span>
+</p>
+
+</div>
+
+</footer>
+<script>
+  // Show a friendly message if the server sent us back with an error (?error=...)
+  (function () {
+    const messages = {
+      missing: 'Please enter your email and password.',
+      invalid: 'Incorrect email or password.',
+      notadmin: 'This account does not have administrator access.',
+      db: 'Something went wrong. Please try again later.'
+    };
+    const code = new URLSearchParams(window.location.search).get('error');
+    if (messages[code]) {
+      const box = document.getElementById('login-error');
+      box.textContent = messages[code];
+      box.style.display = 'block';
+    }
+  })();
+
+  function toggleMenu() {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobile-nav').classList.toggle('open');
+  }
+</script>
+</body>
+
+</html>

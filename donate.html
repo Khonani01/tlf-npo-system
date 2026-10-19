@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | Tshwane Leadership Foundation</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+<div class="popup-overlay" id="popup-overlay">
+  <div class="popup-box" id="popup-box">
+    <div class="popup-icon" id="popup-icon"></div>
+    <h3 id="popup-title"></h3>
+    <p id="popup-message"></p>
+    <button class="popup-close-btn" id="popup-close-btn">OK</button>
+  </div>
+</div>
+
+<header>
+<div class="nav-container">
+  <img src="images/logo.jpeg" alt="Tshwane Leadership logo" class="logo">
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News & Events</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="contact.html">Get Involved</a></li>
+      <li><a href="login.html">Admin</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="news.html">News & Events</a>
+  <a href="reports.html">Reports</a>
+  <a href="contact.html">Get Involved</a>
+  <a href="volunteer.html">Volunteer</a>
+  <a href="donate.html">Donate</a>
+  <a href="login.html">Admin</a>
+</nav>
+</header>
+
+<section class="donate-section">
+
+  <div class="donate-hero">
+    <i class="fa-solid fa-heart-pulse donate-hero-icon"></i>
+    <h1>Support Our Mission</h1>
+    <p>Your contribution helps us empower communities and build a better future across Tshwane.</p>
+  </div>
+
+  <div class="donate-card">
+
+    <div class="donate-name-row">
+      <div class="vol-form-group" style="flex:1">
+        <label for="donor-name"><i class="fa-solid fa-user"></i> Full Name <span class="required">*</span></label>
+        <input type="text" id="donor-name" placeholder="e.g. Sipho Dlamini">
+      </div>
+      <div class="vol-form-group" style="flex:1">
+        <label for="donor-email"><i class="fa-solid fa-envelope"></i> Email Address <span class="required">*</span></label>
+        <input type="email" id="donor-email" placeholder="e.g. sipho@email.com">
+      </div>
+    </div>
+
+    <div class="vol-form-group">
+      <label>Choose Amount (ZAR) <span class="required">*</span></label>
+      <div class="amount-options">
+        <button class="amount-btn" onclick="selectAmount(50, this)">R50</button>
+        <button class="amount-btn active" onclick="selectAmount(100, this)">R100</button>
+        <button class="amount-btn" onclick="selectAmount(200, this)">R200</button>
+        <button class="amount-btn" onclick="selectAmount('other', this)">Other</button>
+      </div>
+    </div>
+
+    <div class="vol-form-group" id="custom-amount-group" style="display:none;">
+      <label for="custom-amount"><i class="fa-solid fa-pen"></i> Enter Custom Amount (ZAR)</label>
+      <input type="number" id="custom-amount" placeholder="e.g. 500" min="1" oninput="updateCustom()">
+    </div>
+
+    <div class="donate-summary">
+      <p>Donation amount: <strong id="donate-display">R100.00</strong></p>
+    </div>
+
+    <div class="vol-form-group">
+      <label for="donate-type"><i class="fa-solid fa-repeat"></i> Donation Type</label>
+      <select id="donate-type">
+        <option value="once">Once-off Donation</option>
+        <option value="monthly">Monthly Donation</option>
+      </select>
+    </div>
+
+    <button class="donate-submit-btn" id="donate-submit-btn" onclick="submitDonation()">
+      <i class="fa-solid fa-heart"></i> Donate Now
+    </button>
+    <p class="secure-note"><i class="fa-solid fa-lock"></i> Secure Transaction &nbsp;|&nbsp; Connect payment gateway (e.g. PayFast) to process live payments.</p>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+<div class="footer-container">
+  <div class="footer-column">
+    <h3>Tshwane Leadership Foundation</h3>
+    <p>Empowering communities through leadership development, education, and social impact initiatives across Tshwane.</p>
+  </div>
+  <div class="footer-column">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News & Events</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="contact.html">Get Involved</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Contact</h3>
+    <p><i class="fa-solid fa-phone"></i> +27 12 345 6789</p>
+    <p><i class="fa-solid fa-envelope"></i> info@tlfoundation.org</p>
+    <p><i class="fa-solid fa-location-dot"></i> Tshwane, South Africa</p>
+  </div>
+  <div class="footer-column">
+    <h3>Follow Us</h3>
+    <div class="footer-social">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </div>
+</div>
+<div class="footer-bottom">
+  <p>© 2026 Tshwane Leadership Foundation | Designed by <span class="designer">Ofentse Nyiko Mashigoane</span></p>
+</div>
+</footer>
+
+<script>
+let selectedAmount = 100;
+function toggleMenu() {
+  document.getElementById('hamburger').classList.toggle('open');
+  document.getElementById('mobile-nav').classList.toggle('open');
+}
+function selectAmount(val, btn) {
+  document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const customGrp = document.getElementById('custom-amount-group');
+  if (val === 'other') {
+    customGrp.style.display = 'block';
+    selectedAmount = parseFloat(document.getElementById('custom-amount').value) || 0;
+  } else {
+    customGrp.style.display = 'none';
+    selectedAmount = val;
+  }
+  document.getElementById('donate-display').textContent = 'R' + (selectedAmount || 0).toFixed(2);
+}
+function updateCustom() {
+  selectedAmount = parseFloat(document.getElementById('custom-amount').value) || 0;
+  document.getElementById('donate-display').textContent = 'R' + selectedAmount.toFixed(2);
+}
+function showPopup(success, title, message, redirectUrl) {
+  const overlay  = document.getElementById('popup-overlay');
+  const box      = document.getElementById('popup-box');
+  const icon     = document.getElementById('popup-icon');
+  document.getElementById('popup-title').textContent   = title;
+  document.getElementById('popup-message').textContent = message;
+  icon.textContent = success ? '✅' : '❌';
+  box.classList.toggle('error', !success);
+  overlay.classList.add('active');
+  document.getElementById('popup-close-btn').onclick = function () {
+    overlay.classList.remove('active');
+    if (success && redirectUrl) window.location.href = redirectUrl;
+  };
+}
+function submitDonation() {
+  const name  = document.getElementById('donor-name').value.trim();
+  const email = document.getElementById('donor-email').value.trim();
+  if (!name)              { showPopup(false, 'Missing Name', 'Please enter your full name.'); return; }
+  if (!email)             { showPopup(false, 'Missing Email', 'Please enter your email address.'); return; }
+  if (!selectedAmount || selectedAmount <= 0) { showPopup(false, 'Invalid Amount', 'Please enter a valid donation amount.'); return; }
+  // When payment gateway (e.g. PayFast) is connected: redirect to payment page here
+  document.getElementById('donate-submit-btn').disabled = true;
+  const ref = 'TLF-' + Date.now().toString().slice(-8);
+  showPopup(true, 'Thank You!', 'Thank you, ' + name + '! Your donation of R' + selectedAmount.toFixed(2) + ' has been received. Reference: ' + ref, 'index.html');
+}
+</script>
+</body>
+</html>

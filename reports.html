@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reports | Tshwane Leadership Foundation</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="nav-container">
+
+<img src="images/logo.jpeg" alt="Tshwane Leadership logo" class="logo">
+
+<nav class="navbar">
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="news.html">News & Events</a></li>
+<li><a href="reports.html">Reports</a></li>
+<li><a href="contact.html">Get Involved</a></li>
+<li><a href="login.html">Admin</a></li>
+
+</ul>
+
+</nav>
+<button class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+</div>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="news.html">News & Events</a>
+  <a href="reports.html">Reports</a>
+  <a href="contact.html">Get Involved</a>
+  <a href="volunteer.html">Volunteer</a>
+  <a href="donate.html">Donate</a>
+  <a href="login.html">Admin</a>
+</nav>
+</header>
+
+
+<section class="reports-section">
+
+<h1>Foundation Reports</h1>
+
+<p class="reports-intro">
+The Tshwane Leadership Foundation publishes regular reports to ensure
+transparency, accountability, and to share the impact of our programs
+within the community.
+</p>
+
+<div class="reports-container">
+
+<div class="report-card">
+<i class="fa-solid fa-file-pdf"></i>
+<h3>Annual Report 2024</h3>
+<p class="report-meta">PDF &bull; 2.4 MB</p>
+<p>Overview of the foundation's activities, programs, and achievements throughout 2024.</p>
+<div class="report-actions">
+  <a href="annual-report-2024.pdf" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> View</a>
+  <a href="annual-report-2024.pdf" download class="btn-download"><i class="fa-solid fa-download"></i> Download</a>
+</div>
+</div>
+
+<div class="report-card">
+<i class="fa-solid fa-file-pdf"></i>
+<h3>Community Impact Report</h3>
+<p class="report-meta">PDF &bull; 3.1 MB</p>
+<p>Highlights the positive impact our projects have made in communities across Tshwane.</p>
+<div class="report-actions">
+  <a href="community-impact.pdf" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> View</a>
+  <a href="community-impact.pdf" download class="btn-download"><i class="fa-solid fa-download"></i> Download</a>
+</div>
+</div>
+
+<div class="report-card">
+<i class="fa-solid fa-file-pdf"></i>
+<h3>Financial Transparency Report</h3>
+<p class="report-meta">PDF &bull; 1.8 MB</p>
+<p>Details about funding, spending, and how donations support community development.</p>
+<div class="report-actions">
+  <a href="financial-report.pdf" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> View</a>
+  <a href="financial-report.pdf" download class="btn-download"><i class="fa-solid fa-download"></i> Download</a>
+</div>
+</div>
+
+<div class="report-card">
+<i class="fa-solid fa-file-pdf"></i>
+<h3>Strategic Plan 2024-2026</h3>
+<p class="report-meta">PDF &bull; 1.2 MB</p>
+<p>TLF's strategic objectives and roadmap for community development from 2024 to 2026.</p>
+<div class="report-actions">
+  <a href="community-impact.pdf" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> View</a>
+  <a href="community-impact.pdf" download class="btn-download"><i class="fa-solid fa-download"></i> Download</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-column">
+
+<h3>Tshwane Leadership Foundation</h3>
+
+<p>
+Empowering communities through leadership development,
+education, and social impact initiatives across Tshwane.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="news.html">News & Events</a></li>
+<li><a href="reports.html">Reports</a></li>
+<li><a href="contact.html">Get Involved</a></li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Contact</h3>
+
+<p><i class="fa-solid fa-phone"></i> +27 12 345 6789</p>
+
+<p><i class="fa-solid fa-envelope"></i> info@tlfoundation.org</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Tshwane, South Africa</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Follow Us</h3>
+
+<div class="footer-social">
+
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+<a href="#"><i class="fa-brands fa-twitter"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Tshwane Leadership Foundation | Designed by 
+<span class="designer">Ofentse Nyiko Mashigoane</span>
+</p>
+
+</div>
+
+</footer>
+<script>
+  function toggleMenu() {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobile-nav').classList.toggle('open');
+  }
+</script>
+</body>
+
+</html>

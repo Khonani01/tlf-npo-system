@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Get Involved | Tshwane Leadership Foundation</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="nav-container">
+
+<img src="images/logo.jpeg" class="logo">
+
+<nav class="navbar">
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="news.html">News & Events</a></li>
+<li><a href="reports.html">Reports</a></li>
+<li><a href="contact.html">Get Involved</a></li>
+<li><a href="login.html">Admin</a></li>
+
+</ul>
+</nav>
+<button class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+</div>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="news.html">News & Events</a>
+  <a href="reports.html">Reports</a>
+  <a href="contact.html">Get Involved</a>
+  <a href="login.html">Admin</a>
+</nav>
+</header>
+
+
+<section class="contact-section">
+
+<h1>Get Involved</h1>
+
+<p>
+Join the Tshwane Leadership Foundation in making a difference in our communities.
+You can volunteer, partner with us, or support our programs.
+</p>
+
+
+<div class="contact-container">
+
+<div class="contact-info">
+
+<h2>Contact Information</h2>
+
+<p><i class="fa-solid fa-location-dot"></i> 123 Community Road, Tshwane, South Africa</p>
+
+<p><i class="fa-solid fa-phone"></i> +27 12 345 6789</p>
+
+<p><i class="fa-solid fa-envelope"></i> info@tlfoundation.org</p>
+
+<p><i class="fa-solid fa-clock"></i> Mon – Fri: 08:00 – 16:30</p>
+
+</div>
+
+
+<form class="contact-form" method="post" action="process_contact.php">
+
+<p id="contact-msg" style="display:none; padding:10px; border-radius:6px; margin-bottom:10px;"></p>
+
+<input type="text" name="fullName" placeholder="Full Name" required maxlength="100">
+
+<input type="email" name="email" placeholder="Email Address" required maxlength="100">
+
+<input type="text" name="subject" placeholder="Subject" maxlength="150">
+
+<textarea name="message" placeholder="Your Message" required minlength="10" maxlength="2000"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section class="map-section">
+
+<h2>Our Location</h2>
+
+<div class="map-container">
+
+<iframe 
+src="https://www.google.com/maps?q=Tshwane%20South%20Africa&output=embed"
+width="100%" 
+height="400" 
+style="border:0;" 
+allowfullscreen="" 
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-column">
+
+<h3>Tshwane Leadership Foundation</h3>
+
+<p>
+Empowering communities through leadership development,
+education, and social impact initiatives across Tshwane.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="news.html">News & Events</a></li>
+<li><a href="reports.html">Reports</a></li>
+<li><a href="contact.html">Get Involved</a></li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Contact</h3>
+
+<p><i class="fa-solid fa-phone"></i> +27 12 345 6789</p>
+
+<p><i class="fa-solid fa-envelope"></i> info@tlfoundation.org</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Tshwane, South Africa</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Follow Us</h3>
+
+<div class="footer-social">
+
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+<a href="#"><i class="fa-brands fa-twitter"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Tshwane Leadership Foundation | Designed by 
+<span class="designer">Ofentse Nyiko Mashigoane</span>
+</p>
+
+</div>
+
+</footer>
+<script>
+  // Show the result after the server sends us back (?success=1 or ?error=...)
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const errors = {
+      missing: 'Please fill in your name, email and message.',
+      email:   'Please enter a valid email address.',
+      short:   'Your message is too short. Please write at least 10 characters.',
+      db:      'Sorry, we could not send your message. Please try again later.'
+    };
+    const box = document.getElementById('contact-msg');
+    if (params.get('success') === '1') {
+      box.textContent = 'Thank you! Your message has been sent. We will get back to you soon.';
+      box.style.background = 'rgba(46,204,113,0.2)'; box.style.color = '#2ecc71';
+      box.style.display = 'block';
+    } else if (errors[params.get('error')]) {
+      box.textContent = errors[params.get('error')];
+      box.style.background = 'rgba(231,76,60,0.2)'; box.style.color = '#ff6b6b';
+      box.style.display = 'block';
+    }
+  })();
+
+  function toggleMenu() {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobile-nav').classList.toggle('open');
+  }
+</script>
+</body>
+</html>

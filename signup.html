@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Tshwane Leadership Foundation</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+<!-- SUCCESS POPUP -->
+<div class="popup-overlay" id="popup-overlay">
+  <div class="popup-box" id="popup-box">
+    <div class="popup-icon" id="popup-icon"></div>
+    <h3 id="popup-title"></h3>
+    <p id="popup-message"></p>
+    <button class="popup-close-btn" id="popup-close-btn">OK</button>
+  </div>
+</div>
+
+<header>
+<div class="nav-container">
+  <img src="images/logo.jpeg" alt="Tshwane Leadership logo" class="logo">
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News & Events</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="contact.html">Get Involved</a></li>
+      <li><a href="login.html">Admin</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="news.html">News & Events</a>
+  <a href="reports.html">Reports</a>
+  <a href="contact.html">Get Involved</a>
+  <a href="volunteer.html">Volunteer</a>
+  <a href="donate.html">Donate</a>
+  <a href="login.html">Admin</a>
+</nav>
+</header>
+
+<section class="volunteer-section">
+  <h1><i class="fa-solid fa-user-plus"></i> Create an Account</h1>
+  <p class="volunteer-intro">Join the Tshwane Leadership Foundation community. Already registered? <a href="login.html" style="color:orange">Log in</a>.</p>
+
+  <form class="volunteer-form-card" id="signup-form" method="post" action="process_signup.php" novalidate>
+
+    <div class="vol-form-group">
+      <label for="su-name"><i class="fa-solid fa-user"></i> Full Name <span class="required">*</span></label>
+      <input type="text" id="su-name" name="fullName" maxlength="100" placeholder="e.g. Thabo Nkosi">
+    </div>
+
+    <div class="vol-form-group">
+      <label for="su-email"><i class="fa-solid fa-envelope"></i> Email Address <span class="required">*</span></label>
+      <input type="email" id="su-email" name="email" maxlength="100" placeholder="e.g. thabo@email.com">
+    </div>
+
+    <div class="vol-form-group">
+      <label for="su-phone"><i class="fa-solid fa-phone"></i> Phone Number (optional)</label>
+      <input type="tel" id="su-phone" name="phone" maxlength="20" placeholder="e.g. 071 234 5678">
+    </div>
+
+    <div class="vol-form-group">
+      <label for="su-role"><i class="fa-solid fa-id-badge"></i> I am joining as a <span class="required">*</span></label>
+      <select id="su-role" name="role">
+        <option value="">-- Select --</option>
+        <option value="volunteer">Volunteer</option>
+        <option value="donor">Donor</option>
+        <option value="stakeholder">Stakeholder / Partner</option>
+      </select>
+    </div>
+
+    <div class="vol-form-group">
+      <label for="su-pass"><i class="fa-solid fa-lock"></i> Password <span class="required">*</span></label>
+      <input type="password" id="su-pass" name="password" placeholder="At least 8 characters, with a letter and a number">
+    </div>
+
+    <div class="vol-form-group">
+      <label for="su-confirm"><i class="fa-solid fa-lock"></i> Confirm Password <span class="required">*</span></label>
+      <input type="password" id="su-confirm" name="confirm" placeholder="Repeat your password">
+    </div>
+
+    <div class="vol-form-group vol-checkbox">
+      <input type="checkbox" id="su-terms" name="terms" value="1">
+      <label for="su-terms">I agree to the <a href="terms.html" target="_blank" style="color:orange">terms and conditions</a> <span class="required">*</span></label>
+    </div>
+
+    <button type="submit" class="volunteer-submit-btn" id="su-btn">
+      <i class="fa-solid fa-user-plus"></i> Create Account
+    </button>
+
+  </form>
+</section>
+
+<footer class="footer">
+<div class="footer-container">
+  <div class="footer-column">
+    <h3>Tshwane Leadership Foundation</h3>
+    <p>Empowering communities through leadership development, education, and social impact initiatives across Tshwane.</p>
+  </div>
+  <div class="footer-column">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News & Events</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="contact.html">Get Involved</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Contact</h3>
+    <p><i class="fa-solid fa-phone"></i> +27 12 345 6789</p>
+    <p><i class="fa-solid fa-envelope"></i> info@tlfoundation.org</p>
+    <p><i class="fa-solid fa-location-dot"></i> Tshwane, South Africa</p>
+  </div>
+  <div class="footer-column">
+    <h3>Follow Us</h3>
+    <div class="footer-social">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </div>
+</div>
+<div class="footer-bottom">
+  <p>© 2026 Tshwane Leadership Foundation | Designed by <span class="designer">Ofentse Nyiko Mashigoane</span></p>
+</div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('hamburger').classList.toggle('open');
+  document.getElementById('mobile-nav').classList.toggle('open');
+}
+function showPopup(success, title, message, redirectUrl) {
+  const overlay  = document.getElementById('popup-overlay');
+  const box      = document.getElementById('popup-box');
+  const icon     = document.getElementById('popup-icon');
+  const titleEl  = document.getElementById('popup-title');
+  const msgEl    = document.getElementById('popup-message');
+  const closeBtn = document.getElementById('popup-close-btn');
+  icon.textContent    = success ? '✅' : '❌';
+  titleEl.textContent = title;
+  msgEl.textContent   = message;
+  box.classList.toggle('error', !success);
+  overlay.classList.add('active');
+  closeBtn.onclick = function () {
+    overlay.classList.remove('active');
+    if (success && redirectUrl) window.location.href = redirectUrl;
+  };
+}
+// Quick checks in the browser BEFORE sending. The server checks everything again.
+document.getElementById('signup-form').addEventListener('submit', function (e) {
+  const name  = document.getElementById('su-name').value.trim();
+  const email = document.getElementById('su-email').value.trim();
+  const phone = document.getElementById('su-phone').value.trim();
+  const role  = document.getElementById('su-role').value;
+  const pass  = document.getElementById('su-pass').value;
+  const conf  = document.getElementById('su-confirm').value;
+  const terms = document.getElementById('su-terms').checked;
+
+  let problem = null;
+  if (!name)                                         problem = ['Missing Name', 'Please enter your full name.'];
+  else if (!email)                                   problem = ['Missing Email', 'Please enter your email address.'];
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) problem = ['Invalid Email', 'Please enter a valid email address.'];
+  else if (phone && !/^\+?[0-9 ()-]{9,20}$/.test(phone)) problem = ['Invalid Phone', 'Please enter a valid phone number, e.g. 071 234 5678.'];
+  else if (!role)                                    problem = ['Missing Role', 'Please choose how you are joining.'];
+  else if (pass.length < 8 || !/[A-Za-z]/.test(pass) || !/[0-9]/.test(pass))
+                                                     problem = ['Weak Password', 'Use at least 8 characters with a letter and a number.'];
+  else if (pass !== conf)                            problem = ['Passwords Differ', 'The two passwords do not match.'];
+  else if (!terms)                                   problem = ['Terms Required', 'Please agree to the terms and conditions.'];
+
+  if (problem) { e.preventDefault(); showPopup(false, problem[0], problem[1]); return; }
+  document.getElementById('su-btn').disabled = true;
+});
+
+// Show the server's answer after it sends us back (?success=1 or ?error=...)
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const errors = {
+    missing:  ['Missing Information', 'Please fill in all the required fields.'],
+    email:    ['Invalid Email', 'Please enter a valid email address.'],
+    phone:    ['Invalid Phone', 'Please enter a valid phone number.'],
+    role:     ['Invalid Choice', 'Please choose one of the options in the list.'],
+    weak:     ['Weak Password', 'Use at least 8 characters with a letter and a number.'],
+    mismatch: ['Passwords Differ', 'The two passwords do not match.'],
+    terms:    ['Terms Required', 'Please agree to the terms and conditions.'],
+    exists:   ['Already Registered', 'An account with this email already exists. Try logging in instead.'],
+    db:       ['Something Went Wrong', 'We could not create your account. Please try again later.']
+  };
+  if (params.get('success') === '1') {
+    showPopup(true, 'Account Created!', 'Your account has been created. You can now log in.', 'login.html');
+  } else if (errors[params.get('error')]) {
+    showPopup(false, errors[params.get('error')][0], errors[params.get('error')][1]);
+  }
+})();
+</script>
+</body>
+</html>

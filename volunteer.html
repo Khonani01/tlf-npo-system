@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Registration | Tshwane Leadership Foundation</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+<!-- SUCCESS POPUP -->
+<div class="popup-overlay" id="popup-overlay">
+  <div class="popup-box" id="popup-box">
+    <div class="popup-icon" id="popup-icon"></div>
+    <h3 id="popup-title"></h3>
+    <p id="popup-message"></p>
+    <button class="popup-close-btn" id="popup-close-btn">OK</button>
+  </div>
+</div>
+
+<header>
+<div class="nav-container">
+  <img src="images/logo.jpeg" alt="Tshwane Leadership logo" class="logo">
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News & Events</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="contact.html">Get Involved</a></li>
+      <li><a href="login.html">Admin</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="news.html">News & Events</a>
+  <a href="reports.html">Reports</a>
+  <a href="contact.html">Get Involved</a>
+  <a href="volunteer.html">Volunteer</a>
+  <a href="donate.html">Donate</a>
+  <a href="login.html">Admin</a>
+</nav>
+</header>
+
+<section class="volunteer-section">
+  <h1><i class="fa-solid fa-hands-helping"></i> Volunteer Registration</h1>
+  <p class="volunteer-intro">Fill in the form below to apply as a volunteer. Our team will review your application and get back to you.</p>
+
+  <form class="volunteer-form-card" id="vol-form" method="post" action="process_volunteer.php" novalidate>
+
+    <div class="vol-form-group">
+      <label for="vol-fullname"><i class="fa-solid fa-user"></i> Full Name <span class="required">*</span></label>
+      <input type="text" id="vol-fullname" name="fullName" maxlength="100" placeholder="e.g. Thabo Nkosi">
+    </div>
+
+    <div class="vol-form-group">
+      <label for="vol-email"><i class="fa-solid fa-envelope"></i> Email Address <span class="required">*</span></label>
+      <input type="email" id="vol-email" name="email" maxlength="100" placeholder="e.g. thabo@email.com">
+    </div>
+
+    <div class="vol-form-group">
+      <label for="vol-phone"><i class="fa-solid fa-phone"></i> Phone Number <span class="required">*</span></label>
+      <input type="tel" id="vol-phone" name="phone" maxlength="20" placeholder="e.g. 071 234 5678">
+    </div>
+
+    <div class="vol-form-group">
+      <label for="vol-skills"><i class="fa-solid fa-star"></i> Skills / Area of Expertise <span class="required">*</span></label>
+      <select id="vol-skills" name="skill">
+        <option value="">-- Select your primary skill --</option>
+        <option value="teaching">Teaching / Tutoring</option>
+        <option value="mentoring">Mentoring / Coaching</option>
+        <option value="events">Event Coordination</option>
+        <option value="admin">Administration</option>
+        <option value="health">Healthcare / First Aid</option>
+        <option value="construction">Construction / Maintenance</option>
+        <option value="communications">Communications / Media</option>
+        <option value="it">IT / Technology</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="vol-form-group">
+      <label for="vol-program"><i class="fa-solid fa-calendar-check"></i> Select Event / Program <span class="required">*</span></label>
+      <select id="vol-program" name="eventChoice">
+        <option value="">-- Select an event or program --</option>
+        <option value="summit">Youth Leadership Summit 2026 (12 Apr)</option>
+        <option value="cleanup">Community Clean-Up Drive (25 Apr)</option>
+        <option value="mentorship">Education Mentorship Programme (3 May)</option>
+        <option value="general">General Volunteer (No specific event)</option>
+      </select>
+    </div>
+
+    <div class="vol-form-group">
+      <label for="vol-message"><i class="fa-solid fa-comment"></i> Why do you want to volunteer? (Optional)</label>
+      <textarea id="vol-message" name="message" maxlength="500" rows="3" placeholder="Tell us a bit about your motivation..."></textarea>
+    </div>
+
+    <div class="vol-form-group vol-checkbox">
+      <input type="checkbox" id="vol-terms" name="terms" value="1">
+      <label for="vol-terms">I agree to the <a href="terms.html" target="_blank" style="color:orange">terms and conditions</a> <span class="required">*</span></label>
+    </div>
+
+    <button type="submit" class="volunteer-submit-btn" id="vol-submit-btn">
+      <i class="fa-solid fa-paper-plane"></i> Apply Now
+    </button>
+
+  </form>
+</section>
+
+<footer class="footer">
+<div class="footer-container">
+  <div class="footer-column">
+    <h3>Tshwane Leadership Foundation</h3>
+    <p>Empowering communities through leadership development, education, and social impact initiatives across Tshwane.</p>
+  </div>
+  <div class="footer-column">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News & Events</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="contact.html">Get Involved</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Contact</h3>
+    <p><i class="fa-solid fa-phone"></i> +27 12 345 6789</p>
+    <p><i class="fa-solid fa-envelope"></i> info@tlfoundation.org</p>
+    <p><i class="fa-solid fa-location-dot"></i> Tshwane, South Africa</p>
+  </div>
+  <div class="footer-column">
+    <h3>Follow Us</h3>
+    <div class="footer-social">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </div>
+</div>
+<div class="footer-bottom">
+  <p>© 2026 Tshwane Leadership Foundation | Designed by <span class="designer">Ofentse Nyiko Mashigoane</span></p>
+</div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('hamburger').classList.toggle('open');
+  document.getElementById('mobile-nav').classList.toggle('open');
+}
+function showPopup(success, title, message, redirectUrl) {
+  const overlay  = document.getElementById('popup-overlay');
+  const box      = document.getElementById('popup-box');
+  const icon     = document.getElementById('popup-icon');
+  const titleEl  = document.getElementById('popup-title');
+  const msgEl    = document.getElementById('popup-message');
+  const closeBtn = document.getElementById('popup-close-btn');
+  icon.textContent    = success ? '✅' : '❌';
+  titleEl.textContent = title;
+  msgEl.textContent   = message;
+  box.classList.toggle('error', !success);
+  overlay.classList.add('active');
+  closeBtn.onclick = function () {
+    overlay.classList.remove('active');
+    if (success && redirectUrl) window.location.href = redirectUrl;
+  };
+}
+// Runs in the browser BEFORE sending, for quick friendly feedback.
+// The server (process_volunteer.php) checks everything again - never trust the browser alone.
+document.getElementById('vol-form').addEventListener('submit', function (e) {
+  const name    = document.getElementById('vol-fullname').value.trim();
+  const email   = document.getElementById('vol-email').value.trim();
+  const phone   = document.getElementById('vol-phone').value.trim();
+  const skills  = document.getElementById('vol-skills').value;
+  const program = document.getElementById('vol-program').value;
+  const terms   = document.getElementById('vol-terms').checked;
+
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const phoneOk = /^\+?[0-9 ()-]{9,20}$/.test(phone);
+
+  let problem = null;
+  if (!name)         problem = ['Missing Name', 'Please enter your full name.'];
+  else if (!email)   problem = ['Missing Email', 'Please enter your email address.'];
+  else if (!emailOk) problem = ['Invalid Email', 'Please enter a valid email address, e.g. thabo@email.com.'];
+  else if (!phone)   problem = ['Missing Phone', 'Please enter your phone number.'];
+  else if (!phoneOk) problem = ['Invalid Phone', 'Please enter a valid phone number, e.g. 071 234 5678.'];
+  else if (!skills)  problem = ['Missing Skills', 'Please select your primary skill area.'];
+  else if (!program) problem = ['Missing Program', 'Please select an event or program.'];
+  else if (!terms)   problem = ['Terms Required', 'Please agree to the terms and conditions.'];
+
+  if (problem) {
+    e.preventDefault();                 // stop the form from being sent
+    showPopup(false, problem[0], problem[1]);
+    return;
+  }
+  document.getElementById('vol-submit-btn').disabled = true;  // stop double-clicks
+});
+
+// After the server redirects back, show its result (?success=1 or ?error=...)
+(function showServerResult() {
+  const params = new URLSearchParams(window.location.search);
+  const errors = {
+    missing:   ['Missing Information', 'Please fill in all the required fields.'],
+    email:     ['Invalid Email', 'Please enter a valid email address.'],
+    phone:     ['Invalid Phone', 'Please enter a valid phone number.'],
+    choice:    ['Invalid Selection', 'Please choose a skill and event from the lists.'],
+    terms:     ['Terms Required', 'Please agree to the terms and conditions.'],
+    duplicate: ['Already Applied', 'You have already applied for this event with this email address.'],
+    db:        ['Something Went Wrong', 'We could not save your application. Please try again later.']
+  };
+  if (params.get('success') === '1') {
+    showPopup(true, 'Application Submitted!', 'Thank you! Your volunteer application has been received. We will contact you shortly.', 'index.html');
+  } else if (errors[params.get('error')]) {
+    showPopup(false, errors[params.get('error')][0], errors[params.get('error')][1]);
+  }
+})();
+</script>
+</body>
+</html>
