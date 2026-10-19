@@ -1,0 +1,3 @@
+
+# Prevent public access to API test files.
+Require all denied
