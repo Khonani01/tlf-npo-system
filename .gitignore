@@ -12,3 +12,8 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Protect local database configuration and diagnostic files
+api/.htaccess
+api/check_db_local.php
+**/google-services.json
