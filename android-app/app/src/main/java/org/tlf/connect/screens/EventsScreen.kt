@@ -1,3 +1,8 @@
+// ==========================================================
+// TLF CONNECT APP - EventsScreen.kt
+// This shows TLF events / activities
+// User can view events and choose to volunteer for one
+// ==========================================================
 package org.tlf.connect.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

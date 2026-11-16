@@ -1,3 +1,8 @@
+// ==========================================================
+// TLF CONNECT APP - PrivacyScreen.kt
+// This shows the Privacy Policy / App privacy info
+// Explains what data TLF collects and how it is used
+// ==========================================================
 package org.tlf.connect.screens
 
 import androidx.compose.foundation.background

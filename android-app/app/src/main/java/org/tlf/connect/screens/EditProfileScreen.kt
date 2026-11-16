@@ -1,3 +1,9 @@
+// ==========================================================
+// TLF CONNECT APP - EditProfileScreen.kt
+// This lets the user change their profile details
+// User can change name and profile photo
+// Updates Firestore "users" document and Firebase Auth
+// ==========================================================
 package org.tlf.connect.screens
 
 import android.widget.Toast

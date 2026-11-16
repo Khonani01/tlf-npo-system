@@ -1,3 +1,9 @@
+// ==========================================================
+// TLF CONNECT APP - VolunteerScreen.kt
+// This is the Volunteer form screen
+// Collects skill area, event and availability
+// Saves volunteer application to Firestore "volunteers"
+// ==========================================================
 package org.tlf.connect.screens
 
 import android.os.Handler
