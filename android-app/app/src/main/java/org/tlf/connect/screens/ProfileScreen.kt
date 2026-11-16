@@ -1,3 +1,9 @@
+// ==========================================================
+// TLF CONNECT APP - ProfileScreen.kt
+// This shows the logged-in user's profile details
+// Shows name, email, and options to Edit Profile, Logout
+// Also has Dark Mode, Language and Privacy options
+// ==========================================================
 package org.tlf.connect.screens
 
 import android.graphics.BitmapFactory

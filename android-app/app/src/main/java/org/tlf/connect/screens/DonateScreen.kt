@@ -1,3 +1,10 @@
+// ==========================================================
+// TLF CONNECT APP - DonateScreen.kt
+// This is the Donate screen
+// User can choose amount: R50, R100, R200 or Other amount
+// User can choose Once-off or Monthly donation
+// Saves donation to Firestore collection "donations"
+// ==========================================================
 package org.tlf.connect.screens
 import android.os.Handler
 import android.os.Looper

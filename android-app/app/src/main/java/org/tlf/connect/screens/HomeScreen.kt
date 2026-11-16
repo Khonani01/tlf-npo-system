@@ -1,3 +1,9 @@
+// ==========================================================
+// TLF CONNECT APP - HomeScreen.kt
+// This is the Home screen after login
+// Shows greeting with user's name from AppStore
+// User can navigate to Donate, Volunteer, Events and Profile
+// ==========================================================
 package org.tlf.connect.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

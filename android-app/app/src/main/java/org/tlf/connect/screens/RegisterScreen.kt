@@ -1,3 +1,10 @@
+// ==========================================================
+// TLF CONNECT APP - RegisterScreen.kt
+// This is the Register screen - creates a new user
+// Creates user in Firebase Auth with email + password
+// Saves name, email and phone to Firestore "users" collection
+// Also saves displayName in Auth so Login can greet by real name
+// ==========================================================
 package org.tlf.connect.screens
 import android.widget.Toast
 import androidx.compose.foundation.background

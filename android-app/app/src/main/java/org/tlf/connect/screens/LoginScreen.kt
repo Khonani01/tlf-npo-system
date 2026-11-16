@@ -1,3 +1,19 @@
+// ==========================================================
+// TLF CONNECT APP - LoginScreen.kt
+// ----------------------------------------------------------
+// WHAT IS THIS FILE?
+// This is the Login screen for the TLF NPO app.
+// The user can log in in 2 ways:
+//  1. With Email + Password
+//  2. With Google Sign-In
+//
+// HOW IT WORKS:
+// - Uses Firebase Auth to check email/password or Google token
+// - If login is successful, it goes to the Home screen
+// - If login fails, it shows an error message on the screen
+// - It also saves the user's real NAME (not email) to AppStore
+//   so Home can say "Hi, Peterson" instead of "Hi, peterson@gmail.com"
+// ==========================================================
 package org.tlf.connect.screens
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
